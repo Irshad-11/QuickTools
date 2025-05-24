@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-span {
+    @apply border-b-[3.5px] md:text-xl border-transparent inline-block hover:bg-gray-200 hover:border-black transition-all duration-300 px-2 py-1 pointer-events-auto rounded-t-sm;
+  }
+
+  .thin-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(100, 116, 139, 0.2) transparent;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .thin-scrollbar:hover::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 116, 139, 0.5);
+    border-radius: 0.375rem;
+    /* rounded-md */
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-button {
+    display: none;
+  }
+
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+}
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./fonts/Fira_Sans/FiraSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arsenal SC';
+  src: url('./fonts/Arsenal_SC/ArsenalSC-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bad Script';
+  src: url('./fonts/Bad_Script/BadScript-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cambo';
+  src: url('./fonts/Cambo/Cambo-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fredericka the Great';
+  src: url('./fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inria Serif';
+  src: url('./fonts/Inria_Serif/InriaSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kdam Thmor Pro';
+  src: url('./fonts/Kdam_Thmor_Pro/KdamThmorPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('./fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tagesschrift';
+  src: url('./fonts/Tagesschrift/Tagesschrift-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
