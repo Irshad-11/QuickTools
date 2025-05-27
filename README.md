@@ -67,8 +67,6 @@ quicktools/
 └── assets/
 ```
 
-📌Structure may changed (because it is my initial module project)
-
 ---
 
 ### 📌 Current Status
