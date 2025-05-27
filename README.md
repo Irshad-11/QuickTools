@@ -1,5 +1,5 @@
 
-## 📘 QuickTools – Quick Notes Module
+# 📘 QuickTools – Quick Notes Module
 
 > A lightweight, browser-based note-taking tool built with vanilla JavaScript, Tailwind CSS, and localStorage. Part of the larger *QuickTools* vision, this standalone **Notes** module lets you create, manage, and export notes easily — no account or server required.
 
