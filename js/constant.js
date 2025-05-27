@@ -28,7 +28,7 @@ export const next = document.getElementById('next')
 // Notes 
 
 export const note_emptyWelcomePlace = document.getElementById('welcome-placeholder')
-
+export const note_folderAndNoteInfo = document.getElementById('folderAndNoteInfoMobile')
 export const folderAndNote = document.getElementById('folder&note')
 export const btn_addFolder = document.getElementById('add-folder')
 export const btn_closeFolderInputBox = document.getElementById('closeFolderInputBox')
@@ -49,3 +49,15 @@ export const note_lastEdit = document.getElementById('lastEdit')
 export const note_folderID = document.getElementById('folderId')
 export const note_noteID = document.getElementById('noteId')
 export const note_exportPDF = document.getElementById('exportPDF')
+
+
+
+// Send Message
+
+
+export const revealBtn = document.getElementById('reveal-btn');
+export const backBtn = document.getElementById('back-btn');
+export const contactForm = document.getElementById('contact-form');
+export const initialView = document.getElementById('initial-view');
+export const contactImage = document.getElementById('contact-image');
+export const successMsg = document.getElementById('success-msg');

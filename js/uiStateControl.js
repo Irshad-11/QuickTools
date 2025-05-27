@@ -5,7 +5,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const btn = el.btn_getIntoWelcomePage();
   const page = el.welcomePage();
 
+  // Get the load count from localStorage, or initialize it to 0
+  let loadCount = parseInt(localStorage.getItem('loadCount')) || 0;
+
+  // Increment the count and update localStorage
+  loadCount++;
+  if (loadCount > 50) {
+    loadCount = 1; // Reset after 50 refreshes
+  }
+  localStorage.setItem('loadCount', loadCount);
+
+  const shouldShowWelcome = loadCount === 1;
+
   if (btn && page) {
+    // Show welcome screen only on first load of the cycle
+    if (shouldShowWelcome) {
+      page.classList.remove('hidden', '-translate-y-full', 'opacity-0');
+      page.classList.add('translate-y-0');
+    } else {
+      page.classList.add('hidden');
+    }
+
+    // Dismiss button logic
     btn.addEventListener('click', () => {
       page.classList.remove('translate-y-0');
       requestAnimationFrame(() => {
@@ -19,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn('Welcome page button or container not found in DOM');
   }
 });
+
 
 
 let leftOpen = true;
@@ -69,9 +91,9 @@ el.overlay.addEventListener('click', () => {
 updateMainContentMargin();
 
 function showCustomToast({
-  message = "Welcome!",
+  message = "Welcome To Quick Tools",
   emoji = "🎉",
-  bgColor = "bg-red-600",
+  bgColor = "bg-green-100",
   barColor = "bg-green-600",
   duration = 2000
 } = {}) {
